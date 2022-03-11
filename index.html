@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bải tập sự kiện chuột</title>
+</head>
+<body  onload="loadImages()">
+<!--    [Bài tập] Game puzzle-->
+<div>
+    <h2>[Bài tập] Game puzzle</h2>
+    <table style="border: 2px solid red">
+        <tr>
+            <td><img id="img11" width="140" height="180" onclick="changeImgRow1('img11')"/></td>
+            <td><img id="img12" width="140" height="180" onclick="changeImgRow1('img12')"/></td>
+            <td><img id="img13" width="140" height="180" onclick="changeImgRow1('img13')"/></td>
+            <td><img id="img14" width="140" height="180" onclick="changeImgRow1('img14')"/></td>
+        </tr>
+        <tr>
+            <td><img id="img21" width="140" height="180" onclick="changeImgRow2('img21')"/></td>
+            <td><img id="img22" width="140" height="180" onclick="changeImgRow2('img22')"/></td>
+            <td><img id="img23" width="140" height="180" onclick="changeImgRow2('img23')"/></td>
+            <td><img id="img24" width="140" height="180" onclick="changeImgRow2('img24')"/></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+<script>
+    //[Bài tập] Game puzzle
+
+    function loadImages(){
+        let imgID1;
+        let num;
+        for (i = 1; i <= 4; i++) {
+            imgID = "img1" + i;
+            num = parseInt(Math.random() * 4) + 1;
+            let img = document.getElementById(imgID);
+            img.src = "IMAGE/" + num + ".PNG";
+
+            imgID = "img2" + i;
+            num = parseInt(Math.random() * 4) + 5;
+            img = document.getElementById(imgID);
+            img.src = "IMAGE/" + num + ".PNG";
+        }
+    }
+
+    function changeImgRow1(imgID) {
+        let img = document.getElementById(imgID);
+        let num = parseInt(Math.random() * 4) + 1;
+        img.src = "IMAGE/" + num + ".PNG";
+    }
+
+    function changeImgRow2(imgID) {
+        let img = document.getElementById(imgID)
+        let num = parseInt(Math.random() * 4) + 5;
+        img.src = "IMAGE/" + num + ".PNG";
+    }
+
+    function showImage(){
+
+    }
+</script>
+</html>
